@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "66803cff-d02d-4469-a850-4ee086b1e4a0",
+		"name": "office api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\": \"adasd\",\n    \"user\": \"dave\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{host}}.execute-api.{{region}}.amazonaws.com/prod/booking",
+					"protocol": "https",
+					"host": [
+						"{{host}}",
+						"execute-api",
+						"{{region}}",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{host}}.execute-api.{{region}}.amazonaws.com/prod/booking",
+					"protocol": "https",
+					"host": [
+						"{{host}}",
+						"execute-api",
+						"{{region}}",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "961bf50e-757e-43fb-be72-f0a7155c1dd3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "23f9623b-6669-4f9b-b064-2779fa75cd99",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "baed1935-30b9-43a2-a6af-fb6996dab0cd",
+			"key": "host",
+			"value": "15c0poxt02"
+		},
+		{
+			"id": "e9b3d62c-1253-4f05-ac40-f699152ee5c6",
+			"key": "region",
+			"value": "eu-central-1"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
