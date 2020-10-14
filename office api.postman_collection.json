@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"date\": \"adasd\",\n    \"user\": \"dave\"\n}",
+					"raw": "{\n    \"date\": \"adasd\",\n    \"userName\": \"dave\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -43,7 +43,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://{{host}}.execute-api.{{region}}.amazonaws.com/prod/booking",
+					"raw": "https://{{host}}.execute-api.{{region}}.amazonaws.com/prod/schedule?name=frank",
 					"protocol": "https",
 					"host": [
 						"{{host}}",
@@ -54,7 +54,13 @@
 					],
 					"path": [
 						"prod",
-						"booking"
+						"schedule"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "frank"
+						}
 					]
 				}
 			},
@@ -85,12 +91,12 @@
 	],
 	"variable": [
 		{
-			"id": "baed1935-30b9-43a2-a6af-fb6996dab0cd",
+			"id": "111c0f8f-d9a4-424c-ba85-df3782d060b9",
 			"key": "host",
 			"value": "15c0poxt02"
 		},
 		{
-			"id": "e9b3d62c-1253-4f05-ac40-f699152ee5c6",
+			"id": "f84455a5-a94e-4d84-bfb1-c6043f0d2b69",
 			"key": "region",
 			"value": "eu-central-1"
 		}

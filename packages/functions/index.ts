@@ -7,6 +7,8 @@ exports.main = async (event: APIGatewayProxyEvent) => {
   switch (event.path) {
     case '/booking':
       if (event.httpMethod === 'POST') return handlePost(event);
+      return notAllowed();
+    case '/schedule':
       if (event.httpMethod === 'GET') return handleGet(event);
       return notAllowed();
     default:
