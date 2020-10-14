@@ -1,3 +1,3 @@
 export enum TableNames {
-    Order = 'Order'
+    Booking = 'booking'
 };

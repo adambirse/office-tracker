@@ -14,7 +14,7 @@ export class OfficeApi extends core.Construct {
     });
 
     new LambdaRestApi(this, 'office-api',  {
-      restApiName: 'Reactshoppe',
+      restApiName: 'office',
       handler: this._handler,
       defaultCorsPreflightOptions: {
         allowMethods: Cors.ALL_METHODS,

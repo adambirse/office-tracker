@@ -8,12 +8,12 @@ export class OfficeDatabase extends core.Construct {
   constructor(scope: core.Construct, id: string) {
     super(scope, id);
 
-    this.orderTable = new dynamodb.Table(this, TableNames.Order, {
+    this.orderTable = new dynamodb.Table(this, TableNames.Booking, {
       partitionKey: { name: 'id', type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PROVISIONED,
       readCapacity: 1,
       writeCapacity: 1,
-      tableName: TableNames.Order,
+      tableName: TableNames.Booking,
       removalPolicy: core.RemovalPolicy.DESTROY,
     });
   }
