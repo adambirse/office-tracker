@@ -3,7 +3,7 @@ import * as iam from '@aws-cdk/aws-iam';
 import * as dynamodb from '@aws-cdk/aws-dynamodb';
 import { TableNames } from './TableNames' 
 
-export class ReactshoppeDatabase extends core.Construct {
+export class OfficeDatabase extends core.Construct {
   private orderTable: dynamodb.Table;
   constructor(scope: core.Construct, id: string) {
     super(scope, id);
