@@ -26,3 +26,7 @@ export const unprocessable = (e: Error) => {
 export const notFound = () => {
   return failure(JSON.stringify({ message: 'not found' }), 404);
 }
+
+export const notAllowed = () => {
+  return failure(JSON.stringify({ message: 'method not allowed' }), 405);
+}

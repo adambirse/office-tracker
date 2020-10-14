@@ -1,6 +1,6 @@
 import { APIGatewayProxyEvent } from 'aws-lambda';
 import { book, getBooking } from './book';
-import { notFound, unprocessable } from './response';
+import { notAllowed, notFound, unprocessable } from './response';
 
 exports.main = async (event: APIGatewayProxyEvent) => {
 
@@ -8,7 +8,7 @@ exports.main = async (event: APIGatewayProxyEvent) => {
     case '/booking':
       if (event.httpMethod === 'POST') return handlePost(event);
       if (event.httpMethod === 'GET') return handleGet(event);
-      return notFound();
+      return notAllowed();
     default:
       return notFound();
   }
