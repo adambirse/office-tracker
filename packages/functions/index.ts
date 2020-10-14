@@ -1,6 +1,6 @@
 import { APIGatewayProxyEvent } from 'aws-lambda';
 import ping from './ping';
-import book from './book';
+import {book, getBooking} from './book';
 import { failure } from './response';
 
 exports.main = async (event: APIGatewayProxyEvent) => {
@@ -10,6 +10,7 @@ exports.main = async (event: APIGatewayProxyEvent) => {
       return ping();
     case '/booking':
       if (event.httpMethod === 'POST') return book(event);
+      if (event.httpMethod === 'GET') return getBooking(event);
       return notFound();
     default:
       return notFound();

@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { TableNames } from 'office-database/TableNames';
 import { success, failure } from './response';
 
-export default async (event: APIGatewayProxyEvent) => {
+export const book = async (event: APIGatewayProxyEvent) => {
   const ddb = new AWS.DynamoDB.DocumentClient();
   let newOrder = {};
   // NOTE: in a real application, we’d do more to validate input
@@ -29,5 +29,17 @@ export default async (event: APIGatewayProxyEvent) => {
       return failure(body);
     }
   }
-  return success(JSON.stringify(newOrder));
+  return success(JSON.stringify({
+    error: 'Provide a booking entry'
+  }));
+};
+
+export const getBooking = async (event: APIGatewayProxyEvent) => {
+  const result = {
+    id: uuidv4(),
+    date: "test date",
+    user: "test user",
+  };
+
+  return success(JSON.stringify(result));
 };
