@@ -1,5 +1,5 @@
 const corsHeaders = {
-  'Content-Type': 'application/json', 
+  'Content-Type': 'application/json',
   'Access-Control-Allow-Methods': '*',
   'Access-Control-Allow-Origin': '*',
 };
@@ -19,3 +19,10 @@ export const failure = (body: string, statusCode = 500) => {
     body,
   }
 };
+
+export const unprocessable = (e: Error) => {
+  return failure(JSON.stringify({ message: e.message }), 422);
+}
+export const notFound = () => {
+  return failure(JSON.stringify({ message: 'not found' }), 404);
+}

@@ -1,10 +1,7 @@
 import { APIGatewayProxyEvent } from 'aws-lambda';
 import { book, getBooking } from './book';
 import ping from './ping';
-import { failure } from './response';
-
-const unprocessable = (e: Error) => failure(JSON.stringify({ message: e.message }), 422);
-const notFound = () => failure(JSON.stringify({ message: 'not found' }), 404);
+import { notFound, unprocessable } from './response';
 
 exports.main = async (event: APIGatewayProxyEvent) => {
 
