@@ -9,6 +9,6 @@
   "main": "reactshoppe-api-stack.js",
   "dependencies": {
     "reactshoppe-api": "^0.0.0",
-    "reactshoppe-database": "^0.0.0"
+    "office-database": "^0.0.0"
   }
 }

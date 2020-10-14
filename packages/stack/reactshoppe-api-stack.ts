@@ -1,5 +1,5 @@
 import * as cdk from '@aws-cdk/core';
-import { OfficeDatabase } from 'reactshoppe-database';
+import { OfficeDatabase } from 'office-database';
 import { ReactshoppeApi } from 'reactshoppe-api';
 
 export class ReactshoppeApiStack extends cdk.Stack {
