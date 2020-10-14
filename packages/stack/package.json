@@ -4,11 +4,11 @@
   "private": true,
   "description": "> TODO: description",
   "author": "Patrick Brandt <patrick@fullstory.com>",
-  "homepage": "https://github.com/patrick-fs/reactshoppe-api#readme",
+  "homepage": "https://github.com/patrick-fs/office-api#readme",
   "license": "ISC",
-  "main": "reactshoppe-api-stack.js",
+  "main": "office-api-stack.js",
   "dependencies": {
-    "reactshoppe-api": "^0.0.0",
+    "office-api": "^0.0.0",
     "office-database": "^0.0.0"
   }
 }

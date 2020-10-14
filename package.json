@@ -1,8 +1,8 @@
 {
-  "name": "reactshoppe-api",
+  "name": "office-api",
   "version": "0.1.0",
   "bin": {
-    "reactshoppe-api": "bin/reactshoppe-api.js"
+    "office-api": "bin/office-api.js"
   },
   "scripts": {
     "build": "tsc && npm run build:webpack",

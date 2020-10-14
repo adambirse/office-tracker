@@ -1,10 +1,10 @@
 {
-  "name": "reactshoppe-api",
+  "name": "office-api",
   "version": "0.0.0",
   "private": true,
   "description": "> TODO: description",
   "author": "Patrick Brandt <patrick@fullstory.com>",
-  "homepage": "https://github.com/patrick-fs/reactshoppe-api#readme",
+  "homepage": "https://github.com/patrick-fs/office-api#readme",
   "license": "ISC",
-  "main": "reactshoppe-api.js"
+  "main": "office-api.js"
 }

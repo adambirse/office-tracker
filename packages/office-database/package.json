@@ -4,7 +4,7 @@
   "private": true,
   "description": "> TODO: description",
   "author": "Patrick Brandt <patrick@fullstory.com>",
-  "homepage": "https://github.com/patrick-fs/reactshoppe-api#readme",
+  "homepage": "https://github.com/patrick-fs/office-api#readme",
   "license": "ISC",
   "main": "office-database.js"
 }
