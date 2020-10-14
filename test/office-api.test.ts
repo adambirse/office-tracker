@@ -1,11 +1,11 @@
 import { expect as expectCDK, matchTemplate, MatchStyle } from '@aws-cdk/assert';
 import * as cdk from '@aws-cdk/core';
-import * as ReactshoppeApi from '../packages/stack/reactshoppe-api-stack';
+import {OfficeApiStack } from '../packages/stack/office-api-stack';
 
 test('Empty Stack', () => {
     const app = new cdk.App();
     // WHEN
-    const stack = new ReactshoppeApi.ReactshoppeApiStack(app, 'MyTestStack');
+    const stack = new OfficeApiStack(app, 'MyTestStack');
     // THEN
     expectCDK(stack).to(matchTemplate({
       "Resources": {}
