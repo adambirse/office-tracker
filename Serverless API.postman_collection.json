@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "92719164-a776-4a9b-831b-9a024bbae6e7",
+		"name": "Serverless API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Hello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{api}}.execute-api.eu-west-2.amazonaws.com/prod/hello",
+					"protocol": "https",
+					"host": [
+						"{{api}}",
+						"execute-api",
+						"eu-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Text",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{api}}.execute-api.eu-west-1.amazonaws.com/prod/hello/{{textId}}",
+					"protocol": "https",
+					"host": [
+						"{{api}}",
+						"execute-api",
+						"eu-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"hello",
+						"{{textId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\":\"Demo3----1113\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{api}}.execute-api.eu-west-2.amazonaws.com/prod/hello",
+					"protocol": "https",
+					"host": [
+						"{{api}}",
+						"execute-api",
+						"eu-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Async",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\":\"words are all I have\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{api}}.execute-api.eu-west-2.amazonaws.com/prod/helloasync",
+					"protocol": "https",
+					"host": [
+						"{{api}}",
+						"execute-api",
+						"eu-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"helloasync"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0b1d943a-8bdf-4049-bf28-0b9526dc372d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7abc45e2-591d-4a52-abc3-299bc6a99ceb",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "4d5c77f5-01e3-40bc-b2f4-5f94bf8e7bb1",
+			"key": "api",
+			"value": "sxbohs3jl5"
+		},
+		{
+			"id": "28e5b00f-9671-4017-b389-5c33c2a7e1a0",
+			"key": "textId",
+			"value": "06c43ce5-2dd7-4509-bda3-aeebf184aabd"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
